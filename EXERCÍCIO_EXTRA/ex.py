@@ -1,18 +1,19 @@
-import random 
+import random
 
 def contador_de_tentativas():
- 
-tentativa = None
+    numero_gerado = random.randint(1, 100)
+    tentativa = None
+    tentativas = 0
 
-numero_gerado = random.uniform(1,100)
-
-while tentativa != numero_gerado: 
-    tentativa = int(input("Escolha um número de 1 a 100 "))
-
-if numero True
-    print(f"Parabéns você acertou o numero! O número é {numero_gerado} ")
-
-else numero False 
-    print("Você errou, tente novamente")
+    while tentativa != numero_gerado:
+        tentativa = int(input("Escolha um número de 1 a 100: "))
+        tentativas += 1
+        
+        if tentativa < numero_gerado:
+            print("O número é maior. Tente novamente.")
+        elif tentativa > numero_gerado:
+            print("O número é menor. Tente novamente.")
+        else:
+            print(f"Parabéns, você acertou! O número era {numero_gerado}. Você tentou {tentativas} vezes.")
 
 contador_de_tentativas()
